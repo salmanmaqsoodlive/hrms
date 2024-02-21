@@ -1,0 +1,128 @@
+{
+ "actions": [],
+ "allow_events_in_timeline": 1,
+ "allow_import": 1,
+ "allow_rename": 1,
+ "autoname": "format:{employee_name}-{#####}",
+ "creation": "2024-02-16 11:25:14.563365",
+ "default_view": "Report",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "employee",
+  "employee_name",
+  "days_of_working",
+  "basic_salary",
+  "factor_of_x",
+  "column_break_mqx40",
+  "overtime_hours",
+  "project",
+  "description",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "employee",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Employee",
+   "options": "Employee",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "employee.first_name",
+   "fieldname": "employee_name",
+   "fieldtype": "Data",
+   "label": "Employee Name"
+  },
+  {
+   "fieldname": "days_of_working",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Working Day",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "employee.base_salary",
+   "fieldname": "basic_salary",
+   "fieldtype": "Currency",
+   "label": "Total Basic Salary"
+  },
+  {
+   "fieldname": "factor_of_x",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Factor of X",
+   "options": "1.0\n1.5\n2.0",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_mqx40",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "overtime_hours",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Overtime Hours",
+   "reqd": 1
+  },
+  {
+   "fieldname": "project",
+   "fieldtype": "Data",
+   "label": "Project",
+   "reqd": 1
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Text",
+   "label": "Description",
+   "reqd": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "options": "Over Time Calculator"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-02-16 12:25:58.419026",
+ "modified_by": "Administrator",
+ "module": "HR",
+ "name": "Over Time Calculator",
+ "name_case": "Title Case",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Employee",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
